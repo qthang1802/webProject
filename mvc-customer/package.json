@@ -1,0 +1,28 @@
+{
+  "name": "hello-express",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www",
+    "bootstrap.min": "node-sass public/scss/bootstrap.min.scss public/css/bootstrap.min.css",
+    "elegant-icons": "node-sass public/scss/elegant-icons.scss public/css/elegant-icons.css",
+    "font-awesome.min": "node-sass public/scss/font-awesome.min.scss public/css/font-awesome.min.css",
+    "magnific-popup": "node-sass public/scss/magnific-popup.scss public/css/magnific-popup.css",
+    "nice-select": "node-sass public/scss/nice-select.scss public/css/nice-select.css",
+    "owl.carousel.min": "node-sass public/scss/owl.carousel.min.scss public/css/owl.carousel.min.css",
+    "slicknav.min": "node-sass public/scss/slicknav.min.scss public/css/slicknav.min.css",
+    "style": "node-sass public/scss/style.scss public/css/style.css"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "hbs": "~4.0.4",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1"
+  },
+  "devDependencies": {
+    "node-sass": "^8.0.0",
+    "nodemon": "^2.0.20"
+  }
+}
