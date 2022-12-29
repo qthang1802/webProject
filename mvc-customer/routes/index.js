@@ -1,10 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
-const cusController = require('../components/products/mainPageController');
+
+const roomController = require('../components/rooms/mainPageController');
 
 
-router.get('/', cusController.get_HomePage);
 
-router.get('/:page', cusController.get_Page);
+
+router.get('/', roomController.lists);
 module.exports = router;
