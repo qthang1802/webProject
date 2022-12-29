@@ -7,3 +7,20 @@ exports.getAll = () => {
 }
 
 exports.get = (id) => roomRepository.get(id);
+
+exports.search =(RoomName)=>{
+    return roomRepository.search(RoomName);
+}
+
+
+exports.filterByCategory = (category) =>{
+    return roomRepository.filterByCategory(category);
+}
+
+exports.sortByPriceAsc =()=>{
+    return roomRepository.sortByPriceAsc();
+}
+
+exports.sortByPriceDesc =()=>{
+    return roomRepository.sortByPriceDesc();
+}
