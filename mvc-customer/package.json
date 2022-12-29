@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www",
+    
+    "start": "node ./bin/www",
+    "start:dev": "nodemon ./bin/www",
     "bootstrap.min": "node-sass public/scss/bootstrap.min.scss public/css/bootstrap.min.css",
     "elegant-icons": "node-sass public/scss/elegant-icons.scss public/css/elegant-icons.css",
     "font-awesome.min": "node-sass public/scss/font-awesome.min.scss public/css/font-awesome.min.css",
@@ -19,7 +21,9 @@
     "express": "~4.16.1",
     "hbs": "~4.0.4",
     "http-errors": "~1.6.3",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3"
   },
   "devDependencies": {
     "node-sass": "^8.0.0",
