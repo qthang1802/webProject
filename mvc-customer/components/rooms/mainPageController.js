@@ -3,8 +3,12 @@ const createError = require('http-errors');
 const qs = require('qs');
 
 
-
-
+exports.link_to = (req, res) => {
+  res.render('rooms/' + req.params.slug);
+}
+exports.getHomePage = (req, res) => {
+  res.render('rooms/home-page');
+}
 
 exports.lists = async (req, res) =>{
   let rooms = [];

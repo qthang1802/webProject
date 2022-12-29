@@ -5,7 +5,8 @@ const router = express.Router();
 const roomController = require('../components/rooms/mainPageController');
 
 
+router.get('/',roomController.getHomePage);
+router.get('/shop', roomController.lists);
+router.get('/:slug', roomController.link_to);
 
-
-router.get('/', roomController.lists);
 module.exports = router;

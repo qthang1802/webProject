@@ -26,7 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', roomRouter);
 app.use('/home-page', roomRouter);
-app.use('/shop',roomRouter);
+app.use('/home-page/shop',roomRouter);
 
 
 
