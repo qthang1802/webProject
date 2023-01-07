@@ -12,4 +12,6 @@ router.get('/:RoomID', roomController.details);
 
 router.get('/:slug', roomController.link_to);
 
+
+
 module.exports = router;

@@ -5,7 +5,9 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
 
+
 const roomRouter = require('./routes/index.js');
+const authRouter = require('./components/auth');
 
 const app = express();
 
@@ -24,10 +26,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', roomRouter);
+
 app.use('/home-page', roomRouter);
 app.use('/home-page/shop',roomRouter);
-
+app.use('/auth', authRouter);
 
 
 
