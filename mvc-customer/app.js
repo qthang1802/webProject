@@ -3,17 +3,25 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-
+const session = require('express-session');
 
 
 const roomRouter = require('./routes/index.js');
 const authRouter = require('./components/auth');
-
+const passport = require('./components/auth/passport');
 const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+
+app.use(session({
+  secret: 'very secret keyboard cat',
+  resave: false,
+  saveUninitialized: false,
+}));
+app.use(passport.authenticate('session'));
+
 
 app.use(function(req, res, next) {
     res.locals.user = req.user;

@@ -25,7 +25,7 @@ exports.register = async (req, res) => {
     };
     // syntax validation
     if (!ajv.validate(schema, req.body)) {
-      res.render('auth/register', { error: 'Invalid input!', layout:'layout_register.hbs'} );
+      res.render('auth/register', { error: 'Invalid INput!', layout:'layout_register.hbs'} );
       return;
     }
     const { 'full-name': fullName, email, password } = req.body;
@@ -35,6 +35,22 @@ exports.register = async (req, res) => {
       res.render('auth/register', { error: e.message,layout:'layout_register.hbs' });
       return;
     }
-    res.redirect('/');
+    res.redirect('/auth/login');
   };
+
+
+
+exports.showLoginForm = (req, res) => {
+  res.render('auth/login', {layout:'layout_register.hbs'});
+};
+
+
+exports.logout = (req, res) => {
+  req.logout(function (err) {
+    if (err) {
+      return next(err);
+    }
+    res.redirect('/');
+  });
+};
 
