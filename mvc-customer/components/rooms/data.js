@@ -106,7 +106,6 @@ const imgSrc = [
         cart_2: '../img/shopping-cart/cart-2.jpg',
         cart_3: '../img/shopping-cart/cart-3.jpg',
         cart_4: '../img/shopping-cart/cart-4.jpg'
-    }  
-]
+    }  ]
 
 exports.imgSrc = imgSrc;
