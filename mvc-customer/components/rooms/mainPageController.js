@@ -26,6 +26,13 @@ exports.lists = async (req, res) =>{
   else if (Category){
     rooms= await roomService.filterByCategory(Category)
   }
+  else if (sortPrice === "asc_price") {
+    rooms = await roomService.sortByPriceAsc();
+  }
+  else if (sortPrice === "dsc_price") {
+    rooms = await roomService.sortByPriceDesc();
+  }
+
   else{
   
   rooms = await roomService.getAll();
@@ -35,20 +42,20 @@ exports.lists = async (req, res) =>{
   res.render('rooms/shop',{rooms, originalUrl: `${req.baseUrl}?${qs.stringify(withoutSort)}`});
   };
 
-  // function get_Category(list, id) {
-  //   let arr = [];
-  //   let i = 0;
-  //   for (; i < list.length; i++) { 
-  //     if (list[i]['RoomID'] == id)
-  //       break;
-  //   }
-  //   for (let j = 0; j<list.length;j++) {
-  //     if (j!=i && list[i]['Category'] ==list[j]['Category'] ){
-  //       arr.push(list[j]);
-  //     }
-  //   }
-  //   return arr;
-  // }
+  function get_Category(list, id) {
+    let arr = [];
+    let i = 0;
+    for (; i < list.length; i++) { 
+      if (list[i]['RoomID'] == id)
+        break;
+    }
+    for (let j = 0; j<list.length;j++) {
+      if (j!=i && list[i]['Category'] ==list[j]['Category'] ){
+        arr.push(list[j]);
+      }
+    }
+    return arr;
+  }
 
   exports.details = async (req, res, next) => {
     const { RoomID } = req.params;
@@ -56,8 +63,8 @@ exports.lists = async (req, res) =>{
     let arr = [];
     const room = await roomService.get(RoomID);
     rooms = await roomService.getAll();
-    //arr = get_Category(rooms,RoomID);
+    arr = get_Category(rooms,RoomID);
     console.log(arr);
     if (!room) return next(createError(404));
-    res.render('rooms/shop-details', {room});
+    res.render('rooms/shop-details', {room,arr});
   };
