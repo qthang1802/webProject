@@ -6,9 +6,13 @@ const logger = require('morgan');
 const session = require('express-session');
 
 
+
+
+
 const roomRouter = require('./routes/index.js');
 const authRouter = require('./components/auth');
 const passport = require('./components/auth/passport');
+
 const app = express();
 
 // view engine setup
@@ -38,6 +42,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/home-page', roomRouter);
 app.use('/home-page/shop',roomRouter);
 app.use('/auth', authRouter);
+
+
 
 
 

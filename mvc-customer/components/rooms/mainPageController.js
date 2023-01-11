@@ -38,7 +38,7 @@ exports.lists = async (req, res) =>{
   // function get_Category(list, id) {
   //   let arr = [];
   //   let i = 0;
-  //   for (; i < list.length; i++) {
+  //   for (; i < list.length; i++) { 
   //     if (list[i]['RoomID'] == id)
   //       break;
   //   }

@@ -12,14 +12,7 @@
                 <a href="#">Sign in</a>
                 <a href="#">FAQs</a>
             </div>
-            <div class="offcanvas__top__hover">
-                <span>Usd <i class="arrow_carrot-down"></i></span>
-                <ul>
-                    <li>USD</li>
-                    <li>EUR</li>
-                    <li>USD</li>
-                </ul>
-            </div>
+          
         </div>
         <div class="offcanvas__nav__option">
             <a href="#" class="search-switch"><img src="../img/icon/search.png" alt=""></a>
@@ -51,12 +44,7 @@
                                 <a href="#">FAQs</a>
                             </div>
                             <div class="header__top__hover">
-                                <span>Usd <i class="arrow_carrot-down"></i></span>
-                                <ul>
-                                    <li>USD</li>
-                                    <li>EUR</li>
-                                    <li>USD</li>
-                                </ul>
+                               
                             </div>
                         </div>
                     </div>
@@ -67,7 +55,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-3">
                     <div class="header__logo">
-                        <a href="/home-page"><img src="../img/logo.png" alt=""></a>
+                        <a href="/home-page"><img src="" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
@@ -75,25 +63,14 @@
                         <ul>
                             <li><a href="/home-page">Home</a></li>
                             <li class="active"><a href="/home-page/shop">Shop</a></li>
-                            <li><a href="#">Pages</a>
-                                <ul class="dropdown">
-                                 
-                                    <li><a href="/home-page/shop-details">Shop Details</a></li>
-                                    <li><a href="/home-page/shopping-cart">Shopping Cart</a></li>
-                                    <li><a href="/home-page/checkout">Check Out</a></li>
-                                    
-                                </ul>
-                            </li>
+                             <li><a href="/home-page/shopping-cart">Shopping Cart</a></li>
                           
                         </ul>
                     </nav>
                 </div>
                 <div class="col-lg-3 col-md-3">
                     <div class="header__nav__option">
-                        <a href="#" class="search-switch"><img src="../img/icon/search.png" alt=""></a>
-                        <a href="#"><img src="../img/icon/heart.png" alt=""></a>
-                        <a href="#"><img src="../img/icon/cart.png" alt=""> <span>0</span></a>
-                        <div class="price">$0.00</div>
+                       
                     </div>
                 </div>
             </div>
@@ -145,24 +122,24 @@
 
                                                     <li>
                                                         <form method="get">
-                                                        <button type="submit" class ="btn btn-light" value ="DeluxeRoom" name ="Category">Deluxe room (20)</button>
+                                                        <button type="submit" class ="btn btn-light" value ="DeluxeRoom" name ="Category">Deluxe room</button>
 
                                                         </form>
                                                     </li>
                                                     <li>
                                                         <form method="get">
-                                                        <button type="submit" class ="btn btn-light" value ="BoardingRoom" name ="Category">Boarding room (20)</button>
+                                                        <button type="submit" class ="btn btn-light" value ="BoardingRoom" name ="Category">Boarding room </button>
                                                         </form>
                                                     </li>
 
                                                     <li>
                                                         <form method="get">
-                                                        <button type="submit" class ="btn btn-light" value ="DormRoom" name ="Category">Dorm room (20)</button>
+                                                        <button type="submit" class ="btn btn-light" value ="DormRoom" name ="Category">Dorm room </button>
                                                         </form>
                                                     </li>
                                                     <li>
                                                         <form method="get">
-                                                        <button type="submit" class ="btn btn-light" value ="SuperRoom" name ="Category">Super room (20)</button>
+                                                        <button type="submit" class ="btn btn-light" value ="SuperRoom" name ="Category">Super room </button>
                                                         </form>
                                                     </li>
                                                     
@@ -233,26 +210,13 @@
                                 </div>
                                 <div class="product__item__text">
                                     <h6>{{RoomName}}</h6>
-                                    <a href="#" class="add-cart">+ Add To Cart</a>
-                                    <div class="rating">
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </div>
+                                    <a href="/home-page/shopping-cart" class="add-cart">+ Add To Cart</a>
+                                    <form method="post">
+                                    <button type="submit" class="add-cart" name="roomId" value="{{RoomID}}">Add to favorite</a>
+                                </form>
+                                   
                                     <h5>${{Price}}</h5>
-                                    <div class="product__color__select">
-                                        <label for="pc-4">
-                                            <input type="radio" id="pc-4">
-                                        </label>
-                                        <label class="active black" for="pc-5">
-                                            <input type="radio" id="pc-5">
-                                        </label>
-                                        <label class="grey" for="pc-6">
-                                            <input type="radio" id="pc-6">
-                                        </label>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
