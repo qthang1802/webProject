@@ -12,7 +12,7 @@ exports.getHomePage = (req, res) => {
 
 
 
-
+// controller 
 exports.lists = async (req, res) =>{
   const {RoomName: nameFilter} = req.query;
   const {Category} = req.query;
