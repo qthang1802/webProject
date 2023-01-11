@@ -9,6 +9,7 @@ exports.add = (roomId, cart) => {
   }
 };
 
+// cart detail of favorite service 
 exports.cartDetails = async (cart) => {
   const cartDetails = { ...cart };
   cartDetails.rooms = await Promise.all(cartDetails.rooms.map(async room => {
