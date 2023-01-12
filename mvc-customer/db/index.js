@@ -7,8 +7,8 @@ const db = {connection: null};
   db.connection = await mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    database: 'cnpm_db',
-    password: "quocthang1802"
+    database: 'cnpm',
+    password: "xuanminh"
   });
   console.log('Database connected!');
 })();

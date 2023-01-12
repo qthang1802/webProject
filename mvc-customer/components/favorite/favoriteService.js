@@ -1,5 +1,6 @@
 const roomService = require('../rooms/Service');
 
+//function add to page favourite
 exports.add = (roomId, cart) => {
   const foundRoom = cart.rooms.find(room => room.id === roomId);
   if (foundRoom)
