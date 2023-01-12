@@ -1,6 +1,4 @@
 const bcrypt = require('bcryptjs');
-
-
 const authRepository = require('./authRepository');
 
 exports.register = async(fullName, email, password) => {
@@ -13,7 +11,6 @@ exports.register = async(fullName, email, password) => {
     return authRepository.insertUser(fullName, email, hash);
 
 }
-
 /**
  * Check user credential and return the user info, otherwise null
  * @param email
