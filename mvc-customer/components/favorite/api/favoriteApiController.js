@@ -25,7 +25,7 @@ exports.cartDetail = async (req, res) => {
 }
 
 
-
+// Controller API favorites 
 exports.manage_button = async (req, res) => {
     const { close } = req.body;
     if (close) {
