@@ -6,12 +6,9 @@ exports.emailExists = async(email)=>{
     return result[0].length > 0;   
 };
 
-
-
 exports.insertUser = async(fullName, email,password) =>{
     await db.connection.execute("insert into user (name,email,password) values (?,?,?)" ,[fullName,email,password]);
 };
-
 
 /**
 * Return the user info with specify email, otherwise null

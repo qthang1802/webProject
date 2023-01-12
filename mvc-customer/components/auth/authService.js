@@ -14,7 +14,6 @@ exports.register = async(fullName, email, password) => {
 
 }
 
-
 /**
  * Check user credential and return the user info, otherwise null
  * @param email

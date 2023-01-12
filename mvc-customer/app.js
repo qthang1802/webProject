@@ -43,10 +43,6 @@ app.use('/home-page', roomRouter);
 app.use('/home-page/shop',roomRouter);
 app.use('/auth', authRouter);
 
-
-
-
-
 //catch 404 and forward to error handler
 app.use(function(req,
                  res,
